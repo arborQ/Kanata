@@ -7,7 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
   template: '<div>test app {{AppName}}</div>'
 })
 class AppComponent {
-    AppName= 'test';
+    AppName= 'test???';
 }
 
 @NgModule({

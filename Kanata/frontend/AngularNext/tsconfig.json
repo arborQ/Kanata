@@ -8,6 +8,12 @@
     "experimentalDecorators": true,
     "noImplicitAny": true,
     "removeComments": true,
-    "suppressImplicitAnyIndexErrors": true
+    "suppressImplicitAnyIndexErrors": true,
+    "typeRoots": [
+      "./node_modules/@types"
+    ],
+    "types": [
+      "core-js"
+    ]
   }
 }

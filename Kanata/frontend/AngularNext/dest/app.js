@@ -1,2 +1,51 @@
-webpackJsonp([0],[function(t,e,o){"use strict";var n=this&&this.__decorate||function(t,e,o,n){var r,a=arguments.length,c=a<3?e:null===n?n=Object.getOwnPropertyDescriptor(e,o):n;if("object"==typeof Reflect&&"function"==typeof Reflect.decorate)c=Reflect.decorate(t,e,o,n);else for(var p=t.length-1;p>=0;p--)(r=t[p])&&(c=(a<3?r(c):a>3?r(e,o,c):r(e,o))||c);return a>3&&c&&Object.defineProperty(e,o,c),c},r=this&&this.__metadata||function(t,e){if("object"==typeof Reflect&&"function"==typeof Reflect.metadata)return Reflect.metadata(t,e)},a=o(1),c=o(280),p=o(278),i=function(){function t(){this.AppName="test"}return t=n([a.Component({selector:"my-app",template:"<div>test app {{AppName}}</div>"}),r("design:paramtypes",[])],t)}(),f=function(){function t(){}return t=n([a.NgModule({bootstrap:[i],imports:[p.BrowserModule],declarations:[i]}),r("design:paramtypes",[])],t)}();c.platformBrowserDynamic().bootstrapModule(f)}]);
-//# sourceMappingURL=app.js.map?_=40697fe7e8faeaf403e4
+webpackJsonp([0],[
+/* 0 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+	var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+	    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+	    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+	    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+	    return c > 3 && r && Object.defineProperty(target, key, r), r;
+	};
+	var __metadata = (this && this.__metadata) || function (k, v) {
+	    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+	};
+	var core_1 = __webpack_require__(1);
+	var platform_browser_dynamic_1 = __webpack_require__(19);
+	var platform_browser_1 = __webpack_require__(21);
+	var AppComponent = (function () {
+	    function AppComponent() {
+	        this.AppName = 'test???';
+	    }
+	    AppComponent = __decorate([
+	        core_1.Component({
+	            selector: 'my-app',
+	            template: '<div>test app {{AppName}}</div>'
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], AppComponent);
+	    return AppComponent;
+	}());
+	var AppModule = (function () {
+	    function AppModule() {
+	    }
+	    AppModule = __decorate([
+	        core_1.NgModule({
+	            bootstrap: [AppComponent],
+	            imports: [platform_browser_1.BrowserModule],
+	            declarations: [
+	                AppComponent
+	            ]
+	        }), 
+	        __metadata('design:paramtypes', [])
+	    ], AppModule);
+	    return AppModule;
+	}());
+	platform_browser_dynamic_1.platformBrowserDynamic().bootstrapModule(AppModule);
+
+
+/***/ }
+]);
+//# sourceMappingURL=app.js.map?_=1c11b5102307a9ac377a
