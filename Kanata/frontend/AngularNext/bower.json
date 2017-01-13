@@ -1,0 +1,20 @@
+{
+  "name": "angular-next",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "arbor <arbor@o2.pl>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/arborQ/Kanata",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "material-design-lite": "^1.3.0"
+  }
+}

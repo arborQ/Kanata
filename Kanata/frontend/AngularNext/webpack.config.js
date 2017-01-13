@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var path = require('path');
 
 module.exports = function (options) {
     return {
@@ -8,13 +9,13 @@ module.exports = function (options) {
             vendor: './src/vendors.ts',
             polyfills: './src/polyfills.ts'
         },
-
         output: {
-            filename: './dest/[name].js?_=[hash]',
-            chunkFilename: './dest/[id].chunk.js?_=[hash]'
+            path: '../../src/Kanata/wwwroot/',
+            filename: 'dest/[name].js?_=[hash]',
+            chunkFilename: 'dest/[id].chunk.js?_=[hash]'
         },
         resolve: {
-            extensions: ['', '.ts', '.js']
+            extensions: ['.ts', '.js']
         },
         devtool: 'source-map',
         module: {
@@ -22,6 +23,10 @@ module.exports = function (options) {
                 {
                     test: /\.ts$/,
                     loaders: ['awesome-typescript-loader', 'angular2-template-loader']
+                },
+                {
+                    test: /\.scss$/,
+                    loaders: ['raw-loader', 'sass-loader'] // sass-loader not scss-loader
                 }
             ]
         },
@@ -31,7 +36,9 @@ module.exports = function (options) {
             }),
             // new webpack.optimize.UglifyJsPlugin(),
             new HtmlWebpackPlugin({
-                template: 'src/index.html'
+                template: 'src/index.html',
+                filename: 'index.html',
+                title: 'AngularNext - Webpack'
             })
         ]
     }
