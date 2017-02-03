@@ -1,0 +1,18 @@
+<table>
+    <thead>
+        <tr>
+            <td></td>
+            <td v-for="item in days">{{item.day.getDate()}}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td v-for="item in days">{{item.day.getDay()}}</td>
+        </tr>
+    </thead>
+    <tbody v-for="project in projects">
+        <tr>
+            <td><input /></td>
+            <td v-for="item in days"><input type="text" /></td>
+        </tr>
+    </tbody>
+</table>
