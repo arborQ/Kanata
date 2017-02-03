@@ -1,13 +1,11 @@
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var path = require('path');
 
 module.exports = function (options) {
     return {
         entry: {
-            app: './src/main.ts',
-            vendor: './src/vendors.ts',
-            polyfills: './src/polyfills.ts'
+            app: './src/main.tsx',
+            vendor: './src/vendors.ts'
         },
         output: {
             path: '../../src/Kanata/wwwroot/',
@@ -15,30 +13,29 @@ module.exports = function (options) {
             chunkFilename: 'dest/[id].chunk.js?_=[hash]'
         },
         resolve: {
-            extensions: ['.ts', '.js']
+            extensions: ['.jsx', '.js', '.tsx', '.ts']
         },
         devtool: 'source-map',
         module: {
             loaders: [
                 {
-                    test: /\.ts$/,
-                    loaders: ['awesome-typescript-loader', 'angular2-template-loader']
+                    test: /\.tsx$/,
+                    loaders: ['babel', 'ts'],
                 },
                 {
-                    test: /\.scss$/,
-                    loaders: ['raw-loader', 'sass-loader'] // sass-loader not scss-loader
+                    test: /\.ts$/,
+                    loaders: ['babel', 'ts'],
                 }
             ]
         },
         plugins: [
             new webpack.optimize.CommonsChunkPlugin({
-                name: ['app', 'vendor', 'polyfills']
+                name: ['app', 'vendor']
             }),
-            // new webpack.optimize.UglifyJsPlugin(),
             new HtmlWebpackPlugin({
                 template: 'src/index.html',
                 filename: 'index.html',
-                title: 'AngularNext - Webpack'
+                title: 'ReactNext - Webpack'
             })
         ]
     }
